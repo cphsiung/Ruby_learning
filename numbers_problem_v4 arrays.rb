@@ -22,3 +22,10 @@ input.times do |i|
   puts "Enter the #{(i + 1).ordinalize} positive integer:"
   collection.push(gets.chomp.to_i)
 end
+
+puts "Comparing to the last value entered, #{collection.last}, here are the observations:"
+i = 0
+while i < input
+  puts "The value at index #{i}, #{collection[i]} is the first number"
+  i += 1
+end
