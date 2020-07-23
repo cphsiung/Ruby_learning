@@ -34,9 +34,10 @@ puts "Please enter first name and last name for 5 students:"
 end
 
 # randomly generate student IDs between 111111 to 999999
-5.times do |i|
-  studentIds.push(rand(111111..999999).to_s)
-end
+# create a list of number from 111111 to 999999
+idList = *(111111..999999)
+# pick 5 from the list so there won't be a duplicate
+studentIds = idList.sample 5
 
 # generate student email in the format of
 # (first inital)+(last name)+(last 3 digits of student ID number)@adadevelopersacademy.org
@@ -47,6 +48,7 @@ end
   else
     firstinitial = firstNames[i][0]
   end
-  string = lastNames[i] + studentIds[i][-3..-1] + "@adadevelopersacademy.org"
+  # studentIds are integer so need to convert to string to get last 3 digits
+  string = lastNames[i] + studentIds[i].to_s[-3..-1] + "@adadevelopersacademy.org"
   emails.push(firstinitial + string)
 end
