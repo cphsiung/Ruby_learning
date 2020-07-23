@@ -1,6 +1,7 @@
 puts "Let's play a numbers game. How many numbers would you like to enter?"
 input = gets.chomp.to_i
 
+# ordinalize numbers to 1st, 2nd, 3rd...etc
 class Integer
   def ordinalize
     case self%10
