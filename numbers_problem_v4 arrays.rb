@@ -23,9 +23,17 @@ input.times do |i|
   collection.push(gets.chomp.to_i)
 end
 
+# comparing if value is greater/less than/equal to the last number
 puts "Comparing to the last value entered, #{collection.last}, here are the observations:"
 i = 0
+last = collection.last
 while i < input
-  puts "The value at index #{i}, #{collection[i]} is the first number"
+    if collection[i] < last
+      puts "The value at index #{i}, #{collection[i]} is less than value at the last index, #{last}."
+    elsif collection[i] = last
+      puts "The value at index #{i}, #{collection[i]} is equal to value at the last index, #{last}."
+    else collection[i] > last
+      puts "The value at index #{i}, #{collection[i]} is greater than value at the last index, #{last}."
+    end
   i += 1
 end
