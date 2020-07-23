@@ -24,9 +24,9 @@ input.times do |i|
 end
 
 # comparing if value is greater/less than/equal to the last number
-puts "Comparing to the last value entered, #{collection.last}, here are the observations:"
-i = 0
 last = collection.last
+puts "Comparing to the last value entered, #{last}, here are the observations:"
+i = 0
 while i < input
     if collection[i] < last
       puts "The value at index #{i}, #{collection[i]} is less than value at the last index, #{last}."
@@ -37,3 +37,15 @@ while i < input
     end
   i += 1
 end
+
+# give the max, min value
+puts "The minimum value in the array is #{collection.min}"
+puts "The maximum value in the array is #{collection.max}"
+# give the average value
+sum = 0
+i = 0
+while i < collection.length
+  sum += collection[i]
+  i += 1
+end
+puts "The average value in the array is #{sum/(collection.length)}"
