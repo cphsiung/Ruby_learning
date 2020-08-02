@@ -1,2 +1,2 @@
 # Ruby_learning
-include files for Ada Developers Bootcamp Jumpstart materials
+include files created for Ada Developers Bootcamp Jumpstart learnings
